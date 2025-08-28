@@ -1,0 +1,53 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: corporate-climber
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/corporate_climber?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none                # ✅ Don't generate or modify schema
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+  sql:
+    init:
+      mode: never                   # ✅ Do NOT run schema.sql or data.sql
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+
+  h2:
+    console:
+      enabled: false                # ✅ H2 not needed in MySQL setup
+
+gemini:
+  api:
+    key: ${GEMINI_API_KEY:AIzaSyDIIC-Z8meEG73B7gSn6m5Ln2fKWM0rxXk}
+    base-url: ${GEMINI_BASE_URL:https://generativelanguage.googleapis.com/v1beta}
+
+google:
+  credentials:
+    path: ${GOOGLE_CREDENTIALS_PATH:C:\\Users\\Paramesh\\Downloads\\sentiment-api-client-key.json}
+
+logging:
+  level:
+    com.corpclimb: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

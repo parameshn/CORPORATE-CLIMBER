@@ -1,0 +1,29 @@
+# Build output
+/target/
+/build/
+/out/
+
+# Dependencies
+/node_modules/
+/.cargo/
+/.gradle/
+/.venv/
+/.m2/
+
+# Package managers cache
+.chocolatey/
+/.docker/
+/.pnpm-store/
+/npm/
+
+# IDE/Editor configs
+.idea/
+/.vscode/
+/*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git config
+.gitconfig

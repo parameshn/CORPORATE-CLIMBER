@@ -1,0 +1,20 @@
+package com.corpclimb.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserSkillDTO {
+    private Long id;
+    private String skillName;
+    private Integer currentLevel;
+    private Integer targetLevel;
+    private LocalDateTime lastAssessed;
+    private LocalDateTime createdAt;
+}
