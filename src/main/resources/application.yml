@@ -8,14 +8,14 @@ spring:
     name: corporate-climber
 
   datasource:
-    url: jdbc:mysql://localhost:3306/corporate_climber?useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123
+    url: ${DB_URL:jdbc:mysql://localhost:3306/corporate_climber?useSSL=false&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: none                # ✅ Don't generate or modify schema
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:
@@ -24,7 +24,7 @@ spring:
 
   sql:
     init:
-      mode: never                   # ✅ Do NOT run schema.sql or data.sql
+      mode: never
 
   jackson:
     serialization:
@@ -34,16 +34,16 @@ spring:
 
   h2:
     console:
-      enabled: false                # ✅ H2 not needed in MySQL setup
+      enabled: false
 
 gemini:
   api:
-    key: ${GEMINI_API_KEY:AIzaSyDIIC-Z8meEG73B7gSn6m5Ln2fKWM0rxXk}
+    key: ${GEMINI_API_KEY}
     base-url: ${GEMINI_BASE_URL:https://generativelanguage.googleapis.com/v1beta}
 
 google:
   credentials:
-    path: ${GOOGLE_CREDENTIALS_PATH:C:\\Users\\Paramesh\\Downloads\\sentiment-api-client-key.json}
+    path: ${GOOGLE_CREDENTIALS_PATH}
 
 logging:
   level:
