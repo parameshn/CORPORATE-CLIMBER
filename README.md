@@ -2,7 +2,7 @@
 
 ## Overview
 
-Corporate Climber is an enterprise-grade Spring Boot application that leverages artificial intelligence and statistical modeling to predict project success probabilities and optimize career development trajectories. The platform utilizes Monte Carlo simulations, machine learning algorithms, and natural language processing to deliver data-driven project recommendations and career guidance.
+Corporate Climber is an enterprise-grade Spring Boot application that leverages artificial intelligence and statistical modeling to predict project success probabilities and optimize career development trajectories. The platform utilizes Monte Carlo simulations, Sentiment analysis, and natural language processing to deliver data-driven project recommendations and career guidance.
 
 ## Architecture
 
